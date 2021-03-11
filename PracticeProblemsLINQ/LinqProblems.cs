@@ -10,7 +10,7 @@ namespace PracticeProblemsLINQ
     {
         //Weighted project points: /10
         //Project points: /25
-       public delegate string 
+       
 
         #region Problem 1 
         //(5 points) Problem 1
@@ -20,13 +20,9 @@ namespace PracticeProblemsLINQ
             //code
             // for (int i = 0, i < )  --- SF: will we need a for loop here or a where, orderby, select??
             //where
-            var queryWords = words.Where(w => w.Contains("th"));
+            var queryWords = words.FindAll(w => w.Contains("th")); //SN: used FindAll since it inharently returns a list, .Where() does not - will need to use .ToList()
 
-            //orderby
-
-            //select
-
-            //return
+            //code
             return queryWords;
 
         }
@@ -39,10 +35,10 @@ namespace PracticeProblemsLINQ
         public static List<string> RunProblem2(List<string> names)
         {
             //code
-            var returnListWithoutDuplicates = names.
+            var returnListWithoutDuplicates = names.Distinct().ToList();
 
             //return
-
+            return returnListWithoutDuplicates;
         }
         #endregion
 
@@ -52,9 +48,11 @@ namespace PracticeProblemsLINQ
         public static Customer RunProblem3(List<Customer> customers)
         {
             //code
+            var returnNameMike = customers.Single(c => c.FirstName == "Mike");
 
             //return
 
+            return returnNameMike;
         }
         #endregion
 
