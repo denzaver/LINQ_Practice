@@ -10,25 +10,36 @@ namespace PracticeProblemsLINQ
     {
         //Weighted project points: /10
         //Project points: /25
-       
+       public delegate string 
+
         #region Problem 1 
         //(5 points) Problem 1
         //Using LINQ, write a method that takes in a list of strings and returns all words that contain the substring “th” from a list.
         public static List<string> RunProblem1(List<string> words)
         {
             //code
+            // for (int i = 0, i < )  --- SF: will we need a for loop here or a where, orderby, select??
+            //where
+            var queryWords = words.Where(w => w.Contains("th"));
+
+            //orderby
+
+            //select
 
             //return
+            return queryWords;
 
         }
         #endregion
 
+            
         #region Problem 2 
         //(5 points) Problem 2
         //Using LINQ, write a method that takes in a list of strings and returns a copy of the list without duplicates.
         public static List<string> RunProblem2(List<string> names)
         {
             //code
+            var returnListWithoutDuplicates = names.
 
             //return
 
