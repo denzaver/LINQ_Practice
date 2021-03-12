@@ -63,9 +63,10 @@ namespace PracticeProblemsLINQ
         public static Customer RunProblem4(List<Customer> customers)
         {
             //code
+            var returnCustomerId = customers.Find(c => c.Id == 3).
 
             //return
-
+            return null;
         }
         #endregion
 
@@ -80,7 +81,7 @@ namespace PracticeProblemsLINQ
             //code
 
             //return
-
+            return null;
         }
         #endregion
 
@@ -93,7 +94,7 @@ namespace PracticeProblemsLINQ
             //code
 
             //return
-
+            return null;
         }
         #endregion
     }
